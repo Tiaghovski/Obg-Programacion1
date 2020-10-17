@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Obligatorio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.3.1.js"></script>
+        <script src="funcionesO.js"></script>
+    </head>
+    <body>
+        <button id="btnListaMedicos">Lista de Médicos</button> 
+         <button id="btnAutenticarse">Autenticarse</button>
+         
+         <div id="secListaMedicos"><br>
+             <form>
+             <table width=50% style="border-collapse: collapse" border="2">
+                 <tr bgcolor="#2ECCFA" ><th>Número</th><th>Nombre</th><th>Apellido</th><th>Especialidad</th></tr>
+                 <tr align="center"><td>123</td><td>Juan</td><td>Pérez</td><td>Medicina General</td></tr>
+                 <tr align="center"><td>456</td><td>Carlos</td><td>Quijano</td><td>Oncólogo</td></tr>
+                 <tr align="center"><td>789</td><td>Hernán</td><td>González</td><td>Cirujano</td></tr>
+                 <tr align="center"><td>987</td><td>Luis</td><td>Rodriguez</td><td>Fisioterapeuta</td></tr>
+                 <tr align="center"><td>654</td><td>Roberto</td><td>De Souza</td><td>Traumatólogo</td></tr>
+             </table>
+             </form>
+         </div>
+         
+         
+         <div id="secAutenticarse"><br>
+             <label>Usuario: </label><input type="text" id="iUsuario">
+             <label>Contraseña: </label><input type="password" id="iContraseña"> <input id="btnIngresar" type="button" value="Ingresar"> 
+             <br><br>
+             <div id="secMensaje"></div>  <br> 
+         </div>
+         <div id="secMensaje3"></div><br>
+         <div id="secBotones">
+             <button id="btnAgregarConsulta">Agregar Consulta</button>             
+             <button id="btnBuscarConsulta">Buscar Historia Clínica</button>             
+             <button id="btnBuscarEntreDosFechas">Buscar Entre Dos Fechas</button>
+             <button id="btnCerrarSesion">Cerrar Sesión</button><br><br>
+         </div>
+         
+         <div id="secNuevoRegistro">
+             <form>
+                 <label>Fecha: </label> <input type="date" id="fecha"><br> <div id="secMensajefecha"></div><br>         
+                 <label>Número del paciente: </label> <input type="number" id="numPaciente"><br> <div id="secMensajenumPaciente"></div><br>
+                 <label>Motivo de consulta: </label> <textarea id="motivoConsulta"></textarea><br> <div id="secMensajemotivoConsulta"></div><br>
+                 <label>Diagnóstico: </label> <textarea id="diagnostico"></textarea><br> <div id="secMensajediagnostico"></div><br>                 
+                 <button id="btnRegistrarConsulta">Registrar Consulta</button> <input type="reset" value="Limpiar Campos"><br><br>
+                 <div id="secMensaje2"></div> 
+             </form>
+         </div>
+         
+          <div id="secConsultas"> 
+            <label>Ingrese el número del paciente: </label><input type="text" id="iBusqueda"> 
+            <button id="btnBuscar">Buscar</button><br><br>
+            <div id="listado"></div>
+        </div>
+         
+         <div id="secBuscarFechas">
+             <label>Ingrese dos fechas para buscar consultas realizadas entre dichas fechas: </label><br><br>
+             <input type="date" placeholder="Desde" id="iDesde"> <input id="iHasta" type="date" placeholder="Hasta"> <button onclick="buscarFechas()">Buscar</button><br><br>
+             <div id="listadoFechas"></div>          
+         </div>
+    </body>
+</html>
